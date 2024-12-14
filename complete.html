@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A web automation tool for performing automated tasks on websites with custom input settings.">
+    <title>Web Automation Tool</title>
+
+    <!-- Add a favicon/logo -->
+    <link rel="icon" href="your-logo-path.png" type="image/png">
+    
+    <!-- External CSS for Font and Styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Top navigation bar styling */
+        .navbar {
+            background-color: #007BFF;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .logo img {
+            width: 50px;
+            height: auto;
+        }
+
+        /* Centered form styling */
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 80px auto 0 auto;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+            color: #555;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer styling */
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-left {
+            font-size: 14px;
+        }
+
+        .footer-center {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .footer-center .heart {
+            color: red;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-right a {
+            color: #333;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .footer-right a:hover {
+            color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top navigation bar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="your-logo-path.png" alt="Website Logo">
+        </div>
+        <div class="nav-links">
+            <a href="/about">About Us</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/pricing">Pricing</a>
+            <a href="/registration">Registration</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Web Automation Tool</h1>
+
+        <form action="/run" method="POST">
+            <div class="form-group">
+                <label for="url">Website URL:</label>
+                <input type="text" id="url" name="url" placeholder="Enter website URL" required>
+            </div>
+
+            <div class="form-group">
+                <label for="cycles">Number of cycles:</label>
+                <input type="number" id="cycles" name="cycles" min="1" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="delay_before_open">Delay before opening (seconds):</label>
+                <input type="number" id="delay_before_open" name="delay_before_open" min="0" value="0" required>
+            </div>
+
+            <div class="form-group">
+                <label for="scroll_delay">Scroll delay (seconds):</label>
+                <input type="number" id="scroll_delay" name="scroll_delay" min="0" value="3" required>
+            </div>
+
+            <div class="form-group">
+                <label for="delay_before_close">Delay before closing (seconds):</label>
+                <input type="number" id="delay_before_close" name="delay_before_close" min="0" value="3" required>
+            </div>
+
+            <input type="submit" value="Run Automation">
+        </form>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="footer-left">
+            © 2024 YourCompany. All rights reserved.
+        </div>
+        <div class="footer-center">
+            Web Automation Tool Built With <span class="heart">❤️</span> For Developers
+        </div>
+        <div class="footer-right">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

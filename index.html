@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Tool</title>
+</head>
+<body>
+    <h1>Web Automation Tool</h1>
+    <form action="/run" method="POST">
+        <label for="url">Website URL:</label><br>
+        <input type="text" id="url" name="url" placeholder="Enter website URL" required><br><br>
+        
+        <label for="cycles">Number of cycles:</label><br>
+        <input type="number" id="cycles" name="cycles" min="1" value="1" required><br><br>
+
+        <input type="submit" value="Run Automation">
+    </form>
+</body>
+</html>
